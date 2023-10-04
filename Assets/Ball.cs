@@ -13,14 +13,14 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Gate"))
         {
-            transform.position = Vector3.zero;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
             GameObject.Find("Player").transform.position = new Vector3(-3, 0, 0);
             GameObject.Find("Enemy").transform.position = new Vector3(3, 0, 0);
         }
         if (collision.gameObject.name.Contains("PlayerGate"))
         {
+            transform.position = Vector3.left;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
             int Text = int.Parse(EnemyScore.text);
             Text++;
             EnemyScore.text = Text.ToString();
@@ -28,6 +28,8 @@ public class Ball : MonoBehaviour
 
         if (collision.gameObject.name.Contains("EnemyGate"))
         {
+            transform.position = Vector3.right;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             int Text = int.Parse(PlayerScore.text);
             Text++;
             PlayerScore.text = Text.ToString();
