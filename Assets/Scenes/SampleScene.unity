@@ -821,7 +821,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 570466108}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ff65bcee7dcc2a4b92411acbb1e332d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -951,7 +951,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 899256286}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ff65bcee7dcc2a4b92411acbb1e332d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1054,6 +1054,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &906823528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906823529}
+  m_Layer: 0
+  m_Name: DefencePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906823529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906823528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1232879988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1413,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1300153192}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ff65bcee7dcc2a4b92411acbb1e332d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1512,7 +1543,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1638364381}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ff65bcee7dcc2a4b92411acbb1e332d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1757,6 +1788,7 @@ GameObject:
   - component: {fileID: 1805737094}
   - component: {fileID: 1805737093}
   - component: {fileID: 1805737096}
+  - component: {fileID: 1805737097}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1893,6 +1925,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1805737097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805737092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8620696003865d44ada7c854b76837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 306174293}
+  speed: 100
+  defencePoint: {fileID: 906823529}
+  targetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1835975566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,7 +1968,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1835975566}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ff65bcee7dcc2a4b92411acbb1e332d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2050,7 +2098,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2027625830}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4ff65bcee7dcc2a4b92411acbb1e332d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2172,3 +2220,4 @@ SceneRoots:
   - {fileID: 47383221}
   - {fileID: 1232879991}
   - {fileID: 103145017}
+  - {fileID: 906823529}
