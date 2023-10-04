@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
 
         if (moveCooldown <= 0)
         {
-            moveCooldown = Random.Range(0, 3f);
+            moveCooldown = Random.Range(0, 2f);
             moveOfset = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         }
 

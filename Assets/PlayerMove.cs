@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-
+    public float speed = 20;
     void Update()
     {
 
@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
         if (mousePos.y <= -2.5) mousePos.y = -2.5f;
 
 
-        GetComponent<Rigidbody2D>().MovePosition(mousePos);
+        var finalPosition = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
+        GetComponent<Rigidbody2D>().MovePosition(finalPosition);
     }
 }
