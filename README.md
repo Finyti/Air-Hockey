@@ -7,4 +7,4 @@ In this game you will find a lot of colors, sounds, you(player), your enemy, 2 g
 All controls in this game works with just a **Mouse**
 
 Donwload or click the link!
-[Play!]([https://play.unity.com/mg/other/airhockeywebgl)
+[Play!](https://github.com/Finyti/Flappy-Bird)
